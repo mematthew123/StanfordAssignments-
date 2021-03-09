@@ -24,7 +24,6 @@ public class SimpleFrogger extends GraphicsProgram {
 		addMouseListeners();
 	}
 
-	/* Responds to a mouse click */
 	public void mouseClicked(MouseEvent e) {
 		double mx = e.getX();
 		double my = e.getY();
@@ -34,13 +33,7 @@ public class SimpleFrogger extends GraphicsProgram {
 			} else {
 				(-SQUARE_SIZE, 0);
 			}
-		} else {
-			if (my > fy) {
-				(0, SQUARE_SIZE);
-			} else {
-				(0, -SQUARE_SIZE);
-			}
-		}
+
 	}
 
 
