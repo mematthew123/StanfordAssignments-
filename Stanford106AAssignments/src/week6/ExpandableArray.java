@@ -1,45 +1,35 @@
 package week6;
 
-import acm.program.ConsoleProgram;
+import java.lang.reflect.Array;
+
+import org.omg.DynamicAny.DynArray;
 
 public class ExpandableArray {
-/**
-* Creates a new expandable array with no elements. */
+
+private static Object[] newArray = null;
+
+
 public ExpandableArray() {
-array = new Object[0]; // Allows us to check length of array
+newArray = new Object[0]; // Allows us to check length of array
                               // even when no elements exist
 }
-/**
-* Sets the element at the given index position to the specified.
-// Copy all the existing elements into new array
-for (int i = 0; i < array.length; i++) {
-         newArray[i] = array[i];
-      }
-      // Keep track of the new array in place of
-      array = newArray;
-   }
-   array[index] = value;
+public void set(int index, Object value) {
+    if (index >= newArray.length) {
+    	
+    	Object[] newArray = new Object[index + 1];
+
+    	for (int i = 0; i < newArray.length; i++) {
+            newArray[i] = newArray[i];
+            
+            newArray = newArray;
+            
+            newArray[index] = value;}}}
+
+            
+            public Object get(int index) {
+                if (index >= Array.getLength(null)) return null;
+                return newArray[index];
+
+            }
+            
 }
-the old array
-/**
-* Returns the element at the specified index position, or null if
-* no such element exists. Note that this method never throws an
-* out-of-bounds exception; if the index is outside the bounds of * the array, the return value is simply null.
-*/
-   public Object get(int index) {
-      if (index >= array.length) return null;
-      return array[index];
-}
-/* Private instance variables */
-   private Object[] array;
-}
-–2–
- * value. If the internal array is not large enough
-* element, the implementation expands the array to */
-  public void set(int index, Object value) {
-     if (index >= array.length) {
-        // Create a new array that is large enough
-        Object[] newArray = new Object[index + 1];
-to contain that
-make room.
- 
