@@ -1,1 +1,4 @@
 
+The first example is incorrect as it should be name.equals("Q") and not a comparison
+
+Second example works as it should.
